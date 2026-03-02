@@ -25,6 +25,7 @@ def get_menu():
 
 @app.post("/order")
 def create_order(order: dict):
+    print("НОВЫЙ ЗАКАЗ", order)
     orders.append(order)
     return {"status": "заказ принят", "order": order}
 
