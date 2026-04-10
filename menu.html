@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню</title>
+</head>
+<body>
+
+    <div class="menu-page-header">
+        <div class="container">
+
+            <div class='header-line'>
+                <div class='header-logo'>
+                    <a href="index.html">
+                        <img src="logo.png" alt="">
+                    </a>
+                </div>
+
+                <div class='nav'>
+                    <a class='nav-item' href="index.html">ГЛАВНАЯ</a>
+                    <a class='nav-item' href="menu.html">МЕНЮ</a>
+                    <a class='nav-item' href="about.html">О НАС</a>
+                    <a class='nav-item' href="booking.html">БРОНЬ</a>
+                </div>
+                <div class='phone'>
+                    <div class='phone-holder'>
+                        <div class='phone-img'>
+                            <img src="phone.png" alt="">
+                        </div>
+
+                        <div class='number'>
+                            <a class='num' href='#'>+7 951-532-40-79</a>
+                        </div>
+                    </div>
+
+                    <div class='phone-text'>
+                        Свяжитесь с нами для <br> бронирования
+                    </div>
+                </div>
+
+                <div class='btn'>
+                    <a class='button' href='booking.html'>ЗАКАЗ СТОЛИКА</a>
+                </div>
+
+                <div class='burger-menu'>
+                    <button id='burger'>
+                        <img src="burger-img.png" alt="">
+                    </button>
+
+                    <div id='menu' class='burger-slide disp'>
+                        <a class='nav-item block' href="index.html">ГЛАВНАЯ</a>
+                        <a class='nav-item block' href="menu.html">МЕНЮ</a>
+                        <a class='nav-item block' href="#">О НАС</a>
+                        <a class='nav-item block' href="#">БРОНЬ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-page-hero">
+                <div class="menu-page-title">
+                    Наше <span>Меню</span>
+                </div>
+
+                <div class="menu-page-subtitle">
+                    Лучшие блюда для вашего настроения
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="menu-categories">
+        <div class="container">
+            <div class="section-title">
+                Основные <span>Категории</span>
+            </div>
+
+            <div class="category-buttons">
+                <a href="#burgers" class="category-btn">Бургеры</a>
+                <a href="#pizza" class="category-btn">Пицца</a>
+                <a href="#drinks" class="category-btn">Напитки</a>
+                <a href="#desserts" class="category-btn">Десерты</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-section" id="burgers">
+        <div class="container">
+            <div class="section-title">
+                Наши <span>Бургеры</span>
+            </div>
+
+            <div class="food-grid">
+
+                <div class="food-card">
+                    <img src="a0.png" alt="" class="food-img">
+                    <div class="food-name">Биг Тейсти</div>
+                    <div class="food-desc">Сочный бургер с фирменным соусом</div>
+                    <div class="food-bottom">
+                        <div class="food-price">420 ₽</div>
+                        <a href="#" class="food-btn">ЗАКАЗАТЬ</a>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <img src="a1.png" alt="" class="food-img">
+                    <div class="food-name">Чикенбургер</div>
+                    <div class="food-desc">Классический бургер с куриной котлетой и салатом</div>
+                    <div class="food-bottom">
+                        <div class="food-price">350 ₽</div>
+                        <a href="#" class="food-btn" onclick="addToCart('Гамбургер Макси', 420, 'burger-i.jpg')">ЗАКАЗАТЬ</a>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <img src="a2.png" alt="" class="food-img">
+                    <div class="food-name">Гранд</div>
+                    <div class="food-desc">Для любителей острого вкуса и насыщенных специй</div>
+                    <div class="food-bottom">
+                        <div class="food-price">390 ₽</div>
+                        <a href="#" class="food-btn" onclick="addToCart('Гамбургер Макси', 420, 'burger-i.jpg')">ЗАКАЗАТЬ</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-section gray-section" id="pizza">
+        <div class="container">
+            <div class="section-title">
+                Вкусная <span>Пицца</span>
+            </div>
+
+            <div class="food-grid">
+
+                <div class="food-card">
+                    <img src="b0.png" alt="" class="food-img">
+                    <div class="food-name">Пепперони</div>
+                    <div class="food-desc">Тонкое тесто, сыр моцарелла и ароматная пепперони</div>
+                    <div class="food-bottom">
+                        <div class="food-price">550 ₽</div>
+                        <a href="#" class="food-btn" onclick="addToCart('Гамбургер Макси', 420, 'burger-i.jpg')">ЗАКАЗАТЬ</a>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <img src="b1.png" alt="" class="food-img">
+                    <div class="food-name">Маргарита</div>
+                    <div class="food-desc">Классика итальянской кухни с томатами и базиликом</div>
+                    <div class="food-bottom">
+                        <div class="food-price">480 ₽</div>
+                        <a href="#" class="food-btn" onclick="addToCart('Гамбургер Макси', 420, 'burger-i.jpg')">ЗАКАЗАТЬ</a>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <img src="b2.png" alt="" class="food-img">
+                    <div class="food-name">4 Сыра</div>
+                    <div class="food-desc">Нежная сырная пицца с насыщенным сливочным вкусом</div>
+                    <div class="food-bottom">
+                        <div class="food-price">620 ₽</div>
+                        <a href="#" class="food-btn" onclick="addToCart('Гамбургер Макси', 420, 'burger-i.jpg')">ЗАКАЗАТЬ</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-section" id="drinks">
+        <div class="container">
+            <div class="section-title">
+                Освежающие <span>Напитки</span>
+            </div>
+
+            <div class="food-grid">
+
+                <div class="food-card">
+                    <img src="c0.png" alt="" class="food-img">
+                    <div class="food-name">Кока Кола</div>
+                    <div class="food-desc">Сладкая, пряная и невероятно бодрящая классика, любимая миллионами.</div>
+                    <div class="food-bottom">
+                        <div class="food-price">150 ₽</div>
+                        <a href="#" class="food-btn">ЗАКАЗАТЬ</a>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <img src="c1.png" alt="" class="food-img">
+                    <div class="food-name">Яблочный сок</div>
+                    <div class="food-desc">Жидкий солнечный свет, выжатый из спелых яблок, — чистая энергия природы в каждом глотке.</div>
+                    <div class="food-bottom">
+                        <div class="food-price">100 ₽</div>
+                        <a href="#" class="food-btn">ЗАКАЗАТЬ</a>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <img src="c2.png" alt="" class="food-img">
+                    <div class="food-name">Adrenaline</div>
+                    <div class="food-desc">Экстремальный заряд энергии с дерзким вкусом, созданный для тех, кто не привык тормозить.</div>
+                    <div class="food-bottom">
+                        <div class="food-price">260 ₽</div>
+                        <a href="#" class="food-btn">ЗАКАЗАТЬ</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-section gray-section" id="desserts">
+        <div class="container">
+            <div class="section-title">
+                Сладкие <span>Десерты</span>
+            </div>
+
+            <div class="food-grid">
+
+                <div class="food-card">
+                    <img src="d0.png" alt="" class="food-img">
+                    <div class="food-name">Пончо</div>
+                    <div class="food-desc">Воздушное облачко нежнейшего теста в глазури из настоящего шоколада, которое тает во рту, оставляя послевкусие счастья.</div>
+                    <div class="food-bottom">
+                        <div class="food-price">80 ₽</div>
+                        <a href="#" class="food-btn">ЗАКАЗАТЬ</a>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <img src="png-klev-club-w3tz-p-sinnabon-png-29.png" alt="" class="food-img">
+                    <div class="food-name">Синабон</div>
+                    <div class="food-desc">Лёгкий и сладкий синабон с творогом</div>
+                    <div class="food-bottom">
+                        <div class="food-price">130 ₽</div>
+                        <a href="#" class="food-btn">ЗАКАЗАТЬ</a>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <img src="с2.png" alt="" class="food-img">
+                    <div class="food-name">Шоколадный брауни</div>
+                    <div class="food-desc">Взрывная комбинация из четырёх видов шоколада: хрустящая корочка, мягкая середина и тягучая сердцевина в каждом кусочке.</div>
+                    <div class="food-bottom">
+                        <div class="food-price">270 ₽</div>
+                        <a href="#" class="food-btn">ЗАКАЗАТЬ</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-order-block">
+        <div class="container">
+            <div class="menu-order-content">
+                <div>
+                    <div class="menu-order-title">Не можете выбрать?</div>
+                    <div class="menu-order-text">Наши сотрудники помогут подобрать лучшие блюда для вас</div>
+                </div>
+
+                <a href="#" class="menu-order-btn">СДЕЛАТЬ ЗАКАЗ</a>
+            </div>
+        </div>
+    </div>
+
+    <div class='footer'>
+        Project MTUCI 2026
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
