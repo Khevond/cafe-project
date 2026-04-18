@@ -1,9 +1,11 @@
-FROM python:3.11
+FROM python:3.12
 
 WORKDIR /app
 
-COPY . .
+COPY requirements.txt .
 
-RUN pip install --no-cache-dir django
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
