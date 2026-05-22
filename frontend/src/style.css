@@ -8,7 +8,7 @@ body {
 }
 
 .header {
-    background-image: url(bg.jpg);
+    background-image: url('/bg.jpg');
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -296,7 +296,7 @@ body {
 
 
 .black-block {
-    background-image: url(black-bg.jpg);
+    background-image: url('/black-bg.jpg');
     padding: 80px 0;
 }
 
@@ -370,7 +370,7 @@ body {
 
 
 .menu {
-    background-image: url(menu-bg.jpg);
+    background-image: url('/menu-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 100px;
@@ -740,7 +740,7 @@ html {
 }
 
 .menu-page-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(bg.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -885,7 +885,7 @@ html {
 }
 
 .menu-order-block {
-    background-image: url(black-bg.jpg);
+    background-image: url('/black-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 80px 0;
