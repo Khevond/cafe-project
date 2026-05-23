@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import App from './App.jsx'
 import Menu from './Menu.jsx'
-import About from './about.jsx'
+import About from './About.jsx'
 import Booking from './Booking.jsx'
 import Cart from './Cart.jsx'
 
@@ -75,6 +75,7 @@ function Root() {
             <Menu
               addToCart={addToCart}
               cartItems={cartItems}
+              decreaseQuantity={decreaseQuantity}
             />
           }
         />

@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
+RUN node node_modules/vite/bin/vite.js build
 
 
 FROM nginx:alpine
@@ -16,3 +16,4 @@ FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+

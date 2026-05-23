@@ -8,7 +8,7 @@ body {
 }
 
 .header {
-    background-image: url('/bg.jpg');
+    background-image: url("/bg.jpg");
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -296,7 +296,7 @@ body {
 
 
 .black-block {
-    background-image: url('/black-bg.jpg');
+    background-image: url("/black-bg.jpg");
     padding: 80px 0;
 }
 
@@ -370,7 +370,7 @@ body {
 
 
 .menu {
-    background-image: url('/menu-bg.jpg');
+    background-image: url("/menu-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 100px;
@@ -740,7 +740,7 @@ html {
 }
 
 .menu-page-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/bg.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -885,7 +885,7 @@ html {
 }
 
 .menu-order-block {
-    background-image: url('/black-bg.jpg');
+    background-image: url("/black-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 80px 0;
@@ -1405,4 +1405,75 @@ html {
         margin: 0 20px;
     }
 }
+
+.cart-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    background: #FF7400;
+
+    border-radius: 12px;
+
+    padding: 10px 16px;
+
+    margin-top: 15px;
+
+    animation: cartAnim 0.3s ease;
+}
+
+.count-btn {
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #FF7400;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.count-btn:hover {
+    transform: scale(1.1);
+}
+
+.count-number {
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    min-width: 20px;
+
+    text-align: center;
+}
+
+@keyframes cartAnim {
+
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
 

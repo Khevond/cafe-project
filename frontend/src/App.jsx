@@ -45,13 +45,6 @@ function App() {
               <button id="burger">
                 <img src="/burger-img.png" alt="" />
               </button>
-
-              <div id="menu" className='burger-slide disp'>
-                <a className='nav-item block' href="#">ГЛАВНАЯ</a>
-                <a className='nav-item block' href="#">МЕНЮ</a>
-                <a className='nav-item block' href="#">О НАС</a>
-                <a className='nav-item block' href="#">БРОНЬ</a>
-              </div>
             </div>
 
           </div>
