@@ -5,14 +5,32 @@ import { useState } from 'react'
 function Booking() {
   const [showMessage, setShowMessage] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setShowMessage(true)
+
+    const formData = {
+      name: e.target[0].value,
+      phone: e.target[1].value,
+      date: e.target[2].value,
+      time: e.target[3].value,
+      guests: e.target[4].value,
+      zone: e.target[5].value,
+      comment: e.target[6].value,
+    }
+
+    const response = await fetch('http://127.0.0.1:8000/api/reservation/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+
+    if (response.ok) {
+      setShowMessage(true)
+    }
   }
 
   return (
     <>
-      {/* шапка */}
       <div className="menu-page-header">
         <div className="container">
 
@@ -63,7 +81,6 @@ function Booking() {
         </div>
       </div>
 
-      {/* форма */}
       <div className="booking-section">
         <div className="container">
 
@@ -139,7 +156,6 @@ function Booking() {
         </div>
       </div>
 
-      {/* них */}
       <div className="footer">
         Project MTUCI 2026
       </div>

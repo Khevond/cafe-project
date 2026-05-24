@@ -13,6 +13,27 @@ function Cart({
     return sum + item.price * item.quantity
   }, 0)
 
+  const handleOrder = async () => {
+    const response = await fetch('http://127.0.0.1:8000/api/order/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        customer_name: 'Гость',
+        customer_phone: '-',
+        items: cartItems.map(item => ({
+          name: item.name,
+          quantity: item.quantity,
+          price: item.price
+        }))
+      })
+    })
+
+    if (response.ok) {
+      alert('Заказ оформлен!')
+      clearCart()
+    }
+  }
+
   return (
     <>
 
@@ -146,9 +167,9 @@ function Cart({
                     ОЧИСТИТЬ
                   </button>
 
-                  <Link to="/booking" className="checkout-btn">
+                  <button className="checkout-btn" onClick={handleOrder}>
                     ОФОРМИТЬ ЗАКАЗ
-                  </Link>
+                  </button>
 
                 </div>
 
