@@ -9,16 +9,16 @@ function Booking() {
     e.preventDefault()
 
     const formData = {
-      name: e.target[0].value,
-      phone: e.target[1].value,
-      date: e.target[2].value,
-      time: e.target[3].value,
-      guests: e.target[4].value,
-      zone: e.target[5].value,
-      comment: e.target[6].value,
+      name: e.target.name.value,
+      phone: e.target.phone.value,
+      date: e.target.date.value,
+      time: e.target.time.value,
+      guests: e.target.guests.value,
+      zone: e.target.zone.value,
+      comment: e.target.comment.value,
     }
 
-    const response = await fetch('http://127.0.0.1:8000/api/reservation/', {
+    const response = await fetch('/api/reservation/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
@@ -93,17 +93,17 @@ function Booking() {
             <form className="booking-form" onSubmit={handleSubmit}>
 
               <div className="form-row">
-                <input type="text" placeholder="Ваше имя" required />
-                <input type="tel" placeholder="Телефон" required />
+                <input type="text" name="name" placeholder="Ваше имя" required />
+                <input type="tel" name="phone" placeholder="Телефон" required />
               </div>
 
               <div className="form-row">
-                <input type="date" required />
-                <input type="time" required />
+                <input type="date" name="date" required />
+                <input type="time" name="time" required />
               </div>
 
               <div className="form-row">
-                <select required>
+                <select name="guests" required>
                   <option value="">Количество гостей</option>
                   <option>1 человек</option>
                   <option>2 человека</option>
@@ -112,7 +112,7 @@ function Booking() {
                   <option>7+</option>
                 </select>
 
-                <select required>
+                <select name="zone" required>
                   <option value="">Зона</option>
                   <option>В зале</option>
                   <option>У окна</option>
@@ -120,7 +120,7 @@ function Booking() {
                 </select>
               </div>
 
-              <textarea placeholder="Комментарий (необязательно)"></textarea>
+              <textarea name="comment" placeholder="Комментарий (необязательно)"></textarea>
 
               <button type="submit" className="booking-btn">
                 ЗАБРОНИРОВАТЬ

@@ -22,9 +22,13 @@ def create_order(request):
             price_at_order=item['price'],
         )
 
-    print(f"🍔 НОВЫЙ ЗАКАЗ #{order.id} | {order.customer_name} | {order.customer_phone}")
+    print(f"")
+    print(f"🍔 НОВЫЙ ЗАКАЗ #{order.id}")
+    print(f"   Имя:     {order.customer_name}")
+    print(f"   Телефон: {order.customer_phone}")
     for item in data['items']:
-        print(f" - {item['name']} x{item['quantity']} = {item['price']}₽")
+        print(f"   - {item['name']} x{item['quantity']} = {item['price']}₽")
+    print(f"")
 
     return JsonResponse({'status': 'ok', 'order_id': order.id})
 
@@ -43,5 +47,16 @@ def create_reservation(request):
         zone=data['zone'],
         comment=data.get('comment', ''),
     )
+
+    print(f"")
+    print(f"📅 НОВАЯ БРОНЬ!")
+    print(f"   Имя:     {data['name']}")
+    print(f"   Телефон: {data['phone']}")
+    print(f"   Дата:    {data['date']}")
+    print(f"   Время:   {data['time']}")
+    print(f"   Гостей:  {data['guests']}")
+    print(f"   Зона:    {data['zone']}")
+    print(f"   Коммент: {data.get('comment', 'нет')}")
+    print(f"")
 
     return JsonResponse({'status': 'ok'})

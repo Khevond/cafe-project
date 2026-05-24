@@ -4,16 +4,8 @@ services:
   backend:
     build: ./backend
     container_name: cafe_backend
-
-  db:
-    image: postgres:15
-    container_name: cafe_db
-    environment:
-      POSTGRES_DB: cafe
-      POSTGRES_USER: cafeuser
-      POSTGRES_PASSWORD: cafepass
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "8000:8000"
 
   frontend:
     build: ./frontend
@@ -25,5 +17,3 @@ services:
     depends_on:
       - backend
 
-volumes:
-  postgres_data:

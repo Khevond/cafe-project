@@ -14,7 +14,7 @@ function Cart({
   }, 0)
 
   const handleOrder = async () => {
-    const response = await fetch('http://127.0.0.1:8000/api/order/', {
+    const response = await fetch('/api/order/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
